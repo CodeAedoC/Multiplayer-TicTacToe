@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="icon" href="assets/tictactoe.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Tic-Tac-Toe</h1>
+
+      <div id="nameInput" class="input-group">
+        <input
+          type="text"
+          id="playerName"
+          placeholder="Enter your name"
+          maxlength="20"
+        />
+        <button onclick="setName()">Set Name</button>
+      </div>
+
+      <div id="menu" class="menu" style="display: none">
+        <button onclick="findGame()" id="findGameBtn">Find Game</button>
+      </div>
+
+      <div class="game-info">
+        <p id="status">Enter your name to start playing</p>
+      </div>
+
+      <div class="board" id="board" style="display: none">
+        <div class="cell" onclick="makeMove(0)"></div>
+        <div class="cell" onclick="makeMove(1)"></div>
+        <div class="cell" onclick="makeMove(2)"></div>
+        <div class="cell" onclick="makeMove(3)"></div>
+        <div class="cell" onclick="makeMove(4)"></div>
+        <div class="cell" onclick="makeMove(5)"></div>
+        <div class="cell" onclick="makeMove(6)"></div>
+        <div class="cell" onclick="makeMove(7)"></div>
+        <div class="cell" onclick="makeMove(8)"></div>
+      </div>
+    </div>
+
+    <div id="gameOver" class="over">
+      <div class="content">
+        <div id="resultIcon" class="result-icon">🏆</div>
+        <h2 id="resultTitle" style="margin-bottom: 20px; color: #2c3e50"></h2>
+        <p id="resultMessage" style="color: #7f8c8d; margin-bottom: 30px"></p>
+        <div class="player-stats">
+          <div class="stat-item">
+            <div class="stat-value" id="playerSymbol">-</div>
+            <div class="stat-label">Your Symbol</div>
+          </div>
+        </div>
+        <button onclick="closeGameOver()" style="width: 100%">
+          Play Again
+        </button>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

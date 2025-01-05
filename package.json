@@ -1,0 +1,17 @@
+{
+  "name": "mult-tictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Jatin Mangtani",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
