@@ -173,7 +173,7 @@ socket.on("gameOver", ({ winner, winnerName }) => {
     }
   }
 
-  setTimeout(showGameOver(winner === "draw" ? "draw" : "win", winner, winnerName), 10000);
+  showGameOver(winner === "draw" ? "draw" : "win", winner, winnerName);
 });
 
 socket.on("playerDisconnected", ({ playerName: disconnectedPlayer }) => {
